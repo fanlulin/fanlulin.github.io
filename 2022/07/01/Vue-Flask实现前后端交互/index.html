@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>hexo的使用 | Hexo</title>
+  <title>Vue+Flask实现前后端交互 | Hexo</title>
   <meta name="keywords" content="">
-  <meta name="description" content="hexo的使用 | Hexo">
+  <meta name="description" content="Vue+Flask实现前后端交互 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="npm run dev命令只能做本地调试，本机的其他服务器是访问不到的一. 如何将Vue项目部署到服务器上  执行npm run build生成dist文件夹，然后将该目录下的文件部署到服务器（服务器如python，tomcat，nginx）。 cd到dist目录，搭建python服务器，使用命令：python -m http.server Vue请求访问接口使用axios库实现，安装命令：npm">
 <meta property="og:type" content="article">
@@ -339,9 +339,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-hexo的使用" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Vue-Flask实现前后端交互" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">hexo的使用</h1>
+        <h1 class="article-title">Vue+Flask实现前后端交互</h1>
     
     <div class="article-meta">
         
@@ -351,7 +351,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-06-29 21:03:13'>2022-06-29 20:52</time>
+            Created At : <time class="date" title='Updated At: 2022-07-01 19:21:37'>2022-07-01 17:58</time>
         
     </div>
     <div class="article-meta">
@@ -373,7 +373,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-new"><span class="toc-text">hexo new</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-c"><span class="toc-text">hexo c</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-g"><span class="toc-text">hexo g</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-s"><span class="toc-text">hexo s</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E4%B8%8A"><span class="toc-text">部署到GitHub上</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#npm-run-dev%E5%91%BD%E4%BB%A4%E5%8F%AA%E8%83%BD%E5%81%9A%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%EF%BC%8C%E6%9C%AC%E6%9C%BA%E7%9A%84%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%98%AF%E8%AE%BF%E9%97%AE%E4%B8%8D%E5%88%B0%E7%9A%84"><span class="toc-text">npm run dev命令只能做本地调试，本机的其他服务器是访问不到的</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -389,13 +389,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这是一个hexo的使用教程</p>
-<span id="more"></span>
-<h2 id="hexo-new"><a href="#hexo-new" class="headerlink" title="hexo new"></a>hexo new</h2><p>创建一个新的文件</p>
-<h2 id="hexo-c"><a href="#hexo-c" class="headerlink" title="hexo c"></a>hexo c</h2><p>清理缓存文件</p>
-<h2 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h2><p>网站发布</p>
-<h2 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h2><p>启动服务器<br>也可以更改端口，hexo s -p 5000</p>
-<h2 id="部署到GitHub上"><a href="#部署到GitHub上" class="headerlink" title="部署到GitHub上"></a>部署到GitHub上</h2><p>hexo d</p>
+        <h2 id="npm-run-dev命令只能做本地调试，本机的其他服务器是访问不到的"><a href="#npm-run-dev命令只能做本地调试，本机的其他服务器是访问不到的" class="headerlink" title="npm run dev命令只能做本地调试，本机的其他服务器是访问不到的"></a>npm run dev命令只能做本地调试，本机的其他服务器是访问不到的</h2><p>一. 如何将Vue项目部署到服务器上</p>
+<ol>
+<li>执行npm run build生成dist文件夹，然后将该目录下的文件部署到服务器（服务器如python，tomcat，nginx）。</li>
+<li>cd到dist目录，搭建python服务器，使用命令：python -m http.server</li>
+<li>Vue请求访问接口<br>使用axios库实现，安装命令：npm install –save axios vue-axios,<br>axios配置：<br>找到main.js，把下main代码粘上去<br>import axios from ‘axios’<br>import VueAxios from ‘vue-axios’<br>app.use(VueAxios, axios)&#x2F;&#x2F;在app对象实例化之后<br>就可以成功设置了。<br>二: 服务器搭建</li>
+<li>安装flask库：pip3 install flask</li>
+<li>运行编写的py文件，会提示在 <a target="_blank" rel="noopener" href="http://localhost:5000/">http://localhost:5000</a> 监听;<br>但是这种也只是本地调试，没有部署到服务器上，安装一个库就可以解决<br>最主要的一个库是 flask_cors，需要继续安装，命令：pip3 install -U flask-cors；<br>cors &#x3D; CORS(app)，就可以实现跨域了。</li>
+</ol>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
